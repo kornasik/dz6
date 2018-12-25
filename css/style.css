@@ -1,0 +1,307 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.search{
+    /*display: flex;
+    flex-direction: column;*/
+    position: relative;
+    margin: 0 auto;
+    width: 400px;
+    height: 60px;
+    background-color: #c0c0c0;
+    border-radius: 5px;
+}
+
+.search select {
+    width: 200px;
+    margin-left: 40px;
+    margin-top: 7px;
+}
+
+.search input[type="text"] {
+    width: 196px;
+    margin-left: 40px;
+    margin-top: 5px;
+}
+
+.search label{
+    color: white;
+    vertical-align: middle;
+}
+
+.auto_div{
+    height: 20px;
+    width: 196px;
+    border-radius: 4px;
+    border:1px solid gray;
+    margin-left: 41px;
+    box-shadow: 0 0 1px;
+}
+
+.overall_div{
+    max-width: 270px;
+    margin-top: 10px;
+    max-height: 100px;
+    overflow-y: scroll
+}
+
+.img_search{
+    width:18px;
+    height:18px;
+    position: absolute;
+    top:32px;
+    left:250px;
+}
+
+.img_search:active{
+    padding: 2px;
+}
+
+.filter{
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: darkgray;
+    width: 200px;
+    position: relative;
+    margin-left: -12px;
+    margin-top: 150px;
+}
+
+.filter input{
+    text-align: center;
+    width: 50px;
+    height: 9px;
+    margin-top: 2px;
+    position: absolute;
+    right: 10px;
+}
+
+.filter label{
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.filter div{
+    margin-top: 30px;
+}
+
+.plates{
+    /*position: absolute;
+    top:300px;
+    left: 300px;*/
+    margin: 0 auto;
+/*    margin-top: -260px;*/
+    width: 940px;
+    margin-top: -264px;
+}
+
+.plate{
+    box-shadow: 0 0 5px;
+    border-radius: 0 10px 10px 0;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    background-color: #fafafa;
+    position: relative;
+}
+
+.plate_price{
+    color:white;
+    background-color: black;
+    font-size: 20px;
+    width: fit-content;
+    margin-top: 10px;
+}
+
+.plate_text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.plate_description{
+    opacity: 0.4;
+    font-size: 17px;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 2px;
+}
+
+
+@media(max-width: 1345px){
+    .plates{
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin:0 auto;
+        margin-top: 30px;
+    }
+
+    .plate:nth-child(2n){
+        margin-left: 20px;
+    }
+
+    .plate{
+        width: fit-content;
+        flex-direction: column;
+        border-radius: 0 0 10px 10px;
+        max-height: 470px;
+        max-width: 450px;
+        position: relative;
+    }
+
+    .filter{
+        display:flex;
+        flex-direction: row;
+        width:fit-content;
+        margin: 110px auto 0 auto;
+    }
+
+    .filter input{
+        position: relative;
+      right: 0;
+    }
+
+    .filter div{
+        margin-top: 0;
+    }
+
+    .plate:focus{
+        border: 1px solid black;
+    }
+
+}
+
+.back_modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.6;
+    z-index: 998;
+}
+
+.modal{
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    opacity: 1;
+    width: 600px;
+    height: 500px;
+    background: white;
+    position: fixed;
+    top: calc(50% - 250px);
+    left: calc(50% - 300px);
+    z-index: 999;
+}
+
+.line_close{
+    background: lightgrey;
+    width:100%;
+    height: 20px;
+}
+
+.modal_img{
+    margin: 0 0 0 20px;
+    width: 50%;
+    height: 40%;
+}
+
+
+.modal_features{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.modal_text{
+    margin-left: 30px;
+    height: 200px;
+}
+
+.modal_text div{
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+#map{
+    width: 580px;
+    height: 230px;
+    margin-left: 10px;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+}
+.close:hover {
+    opacity: 1;
+}
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 20px;
+    width: 2px;
+    background-color: #333;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
+}
+
+.plate_favourites{
+    position: absolute;
+    top: 28px;
+    right: 20px;
+}
+
+.plate_favourites:active{
+    padding: 2px;
+}
+
+.modal_title{
+    font-size:18px;
+    position: absolute;
+    top:0;
+    left: 8%;
+}
+
+.favourites_block{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top:30px;
+    right:20px;
+}
+
+.favourites_block:active{
+    padding: 2px;
+}
+
+.plate:focus{
+    border: 3px solid blue;
+}
+.plate_favourites{
+    width: 25px;
+    height: 25px;
+}
+
+
+
+

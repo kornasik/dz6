@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBisl3viotoyKOd8uYy4AeZLzjys0Wx52Q"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="search">
+            <select class="countrys">
+                <option class="uk">UK</option>
+                <option class="br">Brazil</option>
+                <option class="de">Deutschland</option>
+                <option class="es">Spain</option>
+                <option class="fr">France</option>
+                <option class="it">Italy</option>
+                <option class="mx">Mexico</option>
+                <option class="au">Australia</option>
+            </select>
+            <label><input class="radio_buy" type="radio" name="radio" value="buy" checked>buy</label>
+            <label><input class="radio_rent" type="radio" name="radio" value="rent">rent</label>
+            <br>
+
+            <input class="city_search" type="text" name="city" placeholder="Enter the city" minlength="1" pattern="[A-Za-z]" required>
+            <img class="img_search" src="img/search.png">
+            <img class="favourites_block" src="img/favourites_papka.png">
+
+            <div class='overall_div'></div>
+        </div>
+
+        <div class="filter">
+            <div class="price">
+                <label>Price min:<input type="text" value="0"></label><br>
+                <label>Price max:<input type="text" value="9999999"></label>
+            </div>
+            <div class="rooms">
+                <label>Rooms min:<input type="text" value="0"></label><br>
+                <label>Rooms max:<input type="text" value="999"></label>
+            </div>
+            <div class="bedrooms">
+                <label>Bedrooms min:<input type="text" value="0"></label><br>
+                <label>Bedrooms max:<input type="text" value="999"></label>
+            </div>
+            <div class="bathroom">
+                <label>Bathroom min:<input type="text" value="0"></label><br>
+                <label>Bathroom max:<input type="text" value="999"></label>
+            </div>
+        </div>
+
+        <div class="plates"></div>
+
+        <div class="back_modal"></div>
+        <div class="modal">
+            <div class="plate_favourites"></div>
+            <div class="line_close"></div>
+            <span class="close"></span>
+            <img class="modal_img">
+            <div class="modal_text">
+                <span class="modal_title"></span><br>
+                <span class="modal_features">Property features</span><br><br>
+                <div>Price: <span class="modal_price"></span></div><br>
+                <div><span class="modal_bathroom"></span> bathroom</div><br>
+                <div><span class="modal_bedroom"></span> bedroom</div><br>
+                <div>Property type: <span class="modal_type"></span></div>
+            </div>
+            <div id="map" class="modal_map"></div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="js/countrys.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
