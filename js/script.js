@@ -161,6 +161,11 @@ function createPlates(obj) {
 function createElement(result) {
     console.log(result);
     plates.innerHTML = '';
+    if(result.response.listings.length < 1){
+        plates.innerHTML = 'По данном запросу ничего не найдено.';
+    }
+
+
 
     for (var i = 0; i < result.response.listings.length; i++) {
         createPlates(result.response.listings[i]);
@@ -224,6 +229,7 @@ function createElement(result) {
 }
 
 function loadStorage() {
+
     if (localStorage.length > 0) {
         plates.innerHTML = '';
         for (var i = 0; i < localStorage.length; i++) {
@@ -296,6 +302,8 @@ function loadStorage() {
 
 
 
+    } else{
+        plates.innerHTML = 'В избранном пусто.'
     }
 }
 
