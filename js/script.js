@@ -161,12 +161,14 @@ function createPlates(obj) {
 function createElement(result) {
     console.log(result);
     plates.innerHTML = '';
+
+    if(result.response.status_text === 'Internal Server Error'){
+        plates.innerHTML = result.response.status_text;
+    }
+
     if(result.response.listings.length < 1){
         plates.innerHTML = 'По данном запросу ничего не найдено.';
     }
-
-
-
     for (var i = 0; i < result.response.listings.length; i++) {
         createPlates(result.response.listings[i]);
     }
