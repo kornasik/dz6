@@ -181,6 +181,7 @@ function createElement(result) {
                     plateFavourites.style.width = '25' + 'px';
                     plateFavourites.style.height = '25' + 'px';
                     plateFavourites.alt = 'Добавить в избранное';
+                    fav_block.innerHTML = '';
                     fav_block.appendChild(plateFavourites);
                     modalImg.src = result.response.listings[j].img_url;
                     modalBathroom.innerHTML = result.response.listings[j].bathroom_number;
