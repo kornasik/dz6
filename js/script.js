@@ -32,34 +32,66 @@ function country(evt) {
         case 'Australia':
             window.temp = Countrys.AUSTRALIA;
             window.tempTwo = 'api.nestoria.com.au';
+            document.body.style.background = 'url(img/australia.jpg) no-repeat';
+            document.body.style.backgroundSize = 'cover';
+            document.body.style.backgroundAttachment = 'fixed';
+            plates.innerHTML = '';
             break;
         case 'Brazil':
             window.temp = Countrys.BRAZIL;
             window.tempTwo = 'api.nestoria.com.br';
+            document.body.style.background = 'url(img/brazil.jpg) no-repeat';
+            document.body.style.backgroundSize = 'cover';
+            document.body.style.backgroundAttachment = 'fixed';
+            plates.innerHTML = '';
             break;
         case 'Deutschland':
             window.temp = Countrys.GERMANY;
             window.tempTwo = 'api.nestoria.de';
+            document.body.style.background = 'url(img/germany.jpg) no-repeat';
+            document.body.style.backgroundSize = 'cover';
+            document.body.style.backgroundAttachment = 'fixed';
+            plates.innerHTML = '';
             break;
         case 'Spain':
             window.temp = Countrys.SPAIN;
             window.tempTwo = 'api.nestoria.es';
+            document.body.style.background = 'url(img/spain.jpg) no-repeat';
+            document.body.style.backgroundSize = 'cover';
+            document.body.style.backgroundAttachment = 'fixed';
+            plates.innerHTML = '';
             break;
         case 'France':
             window.temp = Countrys.FRANCE;
             window.tempTwo = 'api.nestoria.fr';
+            document.body.style.background = 'url(img/france.jpg) no-repeat';
+            document.body.style.backgroundSize = 'cover';
+            document.body.style.backgroundAttachment = 'fixed';
+            plates.innerHTML = '';
             break;
         case 'Italy':
             window.temp = Countrys.ITALY;
             window.tempTwo = 'api.nestoria.it';
+            document.body.style.background = 'url(img/italy.jpg) no-repeat';
+            document.body.style.backgroundSize = 'cover';
+            document.body.style.backgroundAttachment = 'fixed';
+            plates.innerHTML = '';
             break;
         case 'Mexico':
             window.temp = Countrys.MEXICO;
             window.tempTwo = 'api.nestoria.mx';
+            document.body.style.background = 'url(img/mexico.jpg) no-repeat';
+            document.body.style.backgroundSize = 'cover';
+            document.body.style.backgroundAttachment = 'fixed';
+            plates.innerHTML = '';
             break;
         case 'UK':
             window.temp = Countrys.UK;
             window.tempTwo = 'api.nestoria.co.uk';
+            document.body.style.background = 'url(img/london.jpg) no-repeat';
+            document.body.style.backgroundSize = 'cover';
+            document.body.style.backgroundAttachment = 'fixed';
+            plates.innerHTML = '';
             break;
     }
 }
@@ -239,14 +271,16 @@ function loadStorage() {
         }
         var btnClear = document.createElement('button');
         var btnExit = document.createElement('button');
-        btnClear.innerHTML = 'Очистить избранное';
+        btnClear.innerHTML = 'Очистить';
+        btnClear.classList = 'btn-clear btn';
         btnClear.style.position = 'absolute';
-        btnClear.style.top = '37' + 'px';
-        btnClear.style.right = '-149' + 'px';
-        btnExit.innerHTML = 'Выйти из избранного';
+        btnClear.style.top = '14' + 'px';
+        btnClear.style.right = '-200' + 'px';
+        btnExit.innerHTML = 'Выйти';
+        btnExit.classList = 'btn-exit btn';
         btnExit.style.position = 'absolute';
-        btnExit.style.top = '10' + 'px';
-        btnExit.style.right = '-150' + 'px';
+        btnExit.style.top = '14' + 'px';
+        btnExit.style.right = '-100' + 'px';
         search.appendChild(btnExit);
         search.appendChild(btnClear);
 
